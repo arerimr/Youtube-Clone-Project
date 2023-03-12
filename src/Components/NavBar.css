@@ -1,0 +1,12 @@
+.Nav-bar{
+    background-color: #fa2100;
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+
+li{
+    list-style: none;
+    display: inline;
+    padding: 10px;
+}

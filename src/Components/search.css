@@ -1,0 +1,17 @@
+.submit{
+    background-color: #dc3544;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    width: 100px;
+    color: white;
+    font-size: x-large;
+}
+
+#search{
+    width: 375px;
+    height: 25px;
+    border-radius: 5px;
+    border-color: solid lightgray ;
+}
+
