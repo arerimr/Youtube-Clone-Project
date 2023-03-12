@@ -5,7 +5,7 @@ import "./search.css"
 
 function Search() {
   const [searchInput, setSearchInput] = useState("")
-  // const [videos, setVideos] = useState([])
+  const [videos, setVideos] = useState([])
 
   function handleTextChange(e){
     let val = e.target.value
@@ -15,10 +15,10 @@ function Search() {
   function handleSubmit(e){
     e.preventDefault()
     console.log(searchInput)
-    // getVideos(searchInput.toLocaleLowerCase()).then((video)=>{
-    //   setVideos(video)
-    //   console.log(videos)
-    // })
+    getVideos(searchInput.toLocaleLowerCase()).then((video)=>{
+      console.log(videos.item)
+      setVideos(video.item)
+    })
     setSearchInput("")
     //to be updated
   }
