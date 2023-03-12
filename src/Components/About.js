@@ -24,7 +24,7 @@ export default function About() {
                     <span>Full Stack Web Developer</span>
                     <span>Pursuit Fellow 9.4 N&W</span>
                     <p>Github: <ExternalLink href="https://github.com/Wilsantos1975" target="_blank">@Wilsantos1975</ExternalLink></p>
-                    <p>Linkedin: <ExternalLink href="" target="_blank">Will Santos</ExternalLink></p>
+                    <p>Linkedin: <ExternalLink href="https://www.linkedin.com/in/fausto-wilghen-santos-9083a9112/" target="_blank">Will Santos</ExternalLink></p>
                 </div>
 
                 <hr />
