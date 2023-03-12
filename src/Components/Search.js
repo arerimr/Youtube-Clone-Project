@@ -1,38 +1,19 @@
-import { useState } from "react"
-import { getVideos } from "../Api/fetch"
 import "./search.css"
 
 
 
-function Search() {
-  const [searchInput, setSearchInput] = useState("")
-  const [videos, setVideos] = useState([])
+function Search({searchInput, handleTextChange, handleSubmit}) {
 
-  function handleTextChange(e){
-    let val = e.target.value
-    setSearchInput(val)
-  }
-
-  function handleSubmit(e){
-    e.preventDefault()
-    console.log(searchInput)
-    getVideos(searchInput.toLocaleLowerCase()).then((video)=>{
-      setVideos(video.items)
-      console.log(videos)
-    })
-    setSearchInput("")
-    //to be updated
-  }
 
   return (
     <div>
-      <form className="search-form" onSubmit={handleSubmit}>
+      <form className="search-form" onSubmit={(e)=>handleSubmit(e)}>
         <input 
         type="text" 
         placeholder="Search..." 
         id="search"
         value={searchInput}
-        onChange={handleTextChange}
+        onChange={(e)=>handleTextChange(e)}
         />
         <button className="submit">Search</button>
       </form>
