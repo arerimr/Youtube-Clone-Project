@@ -2,15 +2,33 @@
     background-color: #fa2100;
     display: flex;
     flex-direction: row;
+    font-family: 'Comic Sans MS';
+    font-size: large;
 }
 
 li{
     list-style: none;
     display: inline;
-    padding: 10px;
+    padding-right: 25px;
+    font-family: 'Comic Sans MS';
+    padding-left: 0;
 }
 
 a{
     color: white;
     text-decoration: none;
+}
+
+.Nav-bar img{
+    color: white;
+    width: 40px;
+}
+
+.header{
+    font-size: xx-large;
+}
+
+.navSearch{
+    padding-top: 25px;
+    padding-left: 25%;
 }
