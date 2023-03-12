@@ -1,6 +1,7 @@
 import { useState } from "react"
-// import { getVideos } from "../fetch"
+import { getVideos } from "../fetch"
 import "./search.css"
+
 
 
 function Search() {
@@ -16,8 +17,8 @@ function Search() {
     e.preventDefault()
     console.log(searchInput)
     getVideos(searchInput.toLocaleLowerCase()).then((video)=>{
-      console.log(videos.item)
-      setVideos(video.item)
+      setVideos(video.items)
+      console.log(videos)
     })
     setSearchInput("")
     //to be updated
