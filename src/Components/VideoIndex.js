@@ -9,8 +9,8 @@ function VideoIndex() {
 
   useEffect(() => {
     getVideos()
-      .then((videos) => {
-        setVideos(videos);
+      .then((video) => {
+        setVideos(video.items);
         setLoadingError(false);
       })
       .catch((error) => {
@@ -30,7 +30,7 @@ function VideoIndex() {
           })
         )}
       </div>
-      <VideoShowPage />
+      {/* <VideoShowPage /> */}
     </div>
   );
 }

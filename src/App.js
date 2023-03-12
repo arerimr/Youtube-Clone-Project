@@ -3,7 +3,7 @@ import NavBar from './Components/NavBar';
 import Footer from './Components/Footer';
 import Home from './Components/Home';
 import About from './Components/About';
-import { BrowserRouter as Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import VideoIndex from './Components/VideoIndex';
 import { getVideos } from './Api/fetch';
 
