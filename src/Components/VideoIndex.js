@@ -4,26 +4,35 @@ import { useParams } from "react-router-dom";
 import VideoShowPage from "./VideoShowPage";
 import ErrorMessage from "../Components/errors/ErrorMessage";
 
-const { search } = useParams();
+// const { id } = useParams();
 
-function VideoIndex() {
+function VideoIndex({searchInput}) {
+
+
   const [loadingError, setLoadingError] = useState(false);
   const [videos, setVideos] = useState([]);
+  // const [search, setSearch] = useState(""); 
 
   useEffect(() => {
-    getVideos()
+    getVideos(searchInput)
       .then((video) => {
+
+        console.log(video.items)
         setVideos(video.items);
         setLoadingError(false);
       })
       .catch((error) => {
         setLoadingError(true);
       });
-  }, []);
+  }, [searchInput]);
 
-  function filterVideo(search, videos) {
+  if (searchInput === undefined) {
+    // searchInput = "surfing"
+  }
+
+  function filterVideo(searchInput, videos) {
     return videos.filter((video) => {
-      return video.title.toLowerCase().match(search.toLowerCase());
+      return video.title.toLowerCase().match(searchInput.toLowerCase());
     });
   }
 
