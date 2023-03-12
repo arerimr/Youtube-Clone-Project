@@ -4,7 +4,7 @@ import VideoIndex from "./VideoIndex";
 
 export default function Home(){
     return(
-        <div>
+        <div className="home">
             <Search />
             <VideoIndex />
         </div>

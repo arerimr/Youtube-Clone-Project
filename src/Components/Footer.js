@@ -2,8 +2,8 @@
 
 function Footer() {
   return (
-    <div>
-      <p>this is a footer</p>
+    <div className="footer">
+      <p>This website was created for educational purposes with Google's YouTube API</p>
     </div>
   )
 }

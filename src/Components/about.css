@@ -1,0 +1,46 @@
+.about a{
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.about a:hover{
+    color: red;
+}
+
+.par{
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.par span{
+    font-style: italic;
+}
+
+.about h3{
+    text-align: left;
+    padding-left: 25px;
+}
+
+.about img{
+    width: 275px;
+    border-radius: 50%;
+}
+
+.team{
+    display: flex;
+    flex-direction: row;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+}
+
+.info a{
+    color: red;
+}
+
+.info a:hover{
+    color: black;
+}
