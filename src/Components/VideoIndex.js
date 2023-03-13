@@ -28,11 +28,11 @@ function VideoIndex({searchInput}) {
   //   // searchInput = "surfing"
   // }
 
-  // function filterVideo(searchInput, videos) {
-  //   return videos.filter((video) => {
-  //     return video.title.toLowerCase().match(searchInput.toLowerCase());
-  //   });
-  // }
+  function filterVideo(searchInput, videos) {
+    return videos.filter((video) => {
+      return video.title.toLowerCase().match(searchInput.toLowerCase());
+    });
+  }
 
 
 
