@@ -1,13 +1,13 @@
 import { getVideos } from "../Api/fetch";
 import { useEffect, useState, } from "react";
-// import { useParams } from "react-router-dom";
-// import VideoShowPage from "./VideoShowPage";
+
+import { useParams } from "react-router-dom";
+import VideoShowPage from "./VideoShowPage";
 import ErrorMessage from "../Components/errors/ErrorMessage";
 
-// const { id } = useParams();
+const { search } = useParams();
 
-function VideoIndex({searchInput}) {
-
+function VideoIndex() {
   const [loadingError, setLoadingError] = useState(false);
   const [search, setSearch] = useState(""); 
   const [videos, setVideos] = useState([]);
@@ -33,6 +33,14 @@ function VideoIndex({searchInput}) {
   //     return video.title.toLowerCase().match(searchInput.toLowerCase());
   //   });
   // }
+
+
+
+  function filterVideo(search, videos) {
+    return videos.filter((video) => {
+      return video.title.toLowerCase().match(search.toLowerCase());
+    });
+  }
 
 
 
