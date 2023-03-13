@@ -1,5 +1,6 @@
 import { getVideos } from "../Api/fetch";
 import { useEffect, useState, } from "react";
+
 import { useParams } from "react-router-dom";
 import VideoShowPage from "./VideoShowPage";
 import ErrorMessage from "../Components/errors/ErrorMessage";
@@ -8,18 +9,32 @@ const { search } = useParams();
 
 function VideoIndex() {
   const [loadingError, setLoadingError] = useState(false);
+  const [search, setSearch] = useState(""); 
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
-    getVideos()
+    getVideos(searchInput)
       .then((video) => {
+        console.log(video.items)
         setVideos(video.items);
         setLoadingError(false);
       })
       .catch((error) => {
         setLoadingError(true);
       });
-  }, []);
+  }, [searchInput]);
+
+  // if (searchInput === undefined) {
+  //   // searchInput = "surfing"
+  // }
+
+  // function filterVideo(searchInput, videos) {
+  //   return videos.filter((video) => {
+  //     return video.title.toLowerCase().match(searchInput.toLowerCase());
+  //   });
+  // }
+
+
 
   function filterVideo(search, videos) {
     return videos.filter((video) => {
@@ -37,7 +52,12 @@ function VideoIndex() {
           <ErrorMessage />
         ) : (
           videos.map((video) => {
-            return <VideoShowPage key={video.id} video={video} />;
+            return (
+              <div key={video.id}>
+                <img src={video.snippet.thumbnails.medium.url} alt={video.snippet.title} />
+                <p>{video.snippet.title}</p>
+              </div>
+            );
           })
         )}
       </div>

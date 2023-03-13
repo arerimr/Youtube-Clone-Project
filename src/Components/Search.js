@@ -4,7 +4,6 @@ import "./search.css"
 
 function Search({searchInput, handleTextChange, handleSubmit}) {
 
-
   return (
     <div>
       <form className="search-form" onSubmit={(e)=>handleSubmit(e)}>

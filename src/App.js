@@ -35,7 +35,7 @@ function App() {
         <br />
         <Routes>
           <Route path='/' element={<Home searchInput={searchInput} handleTextChange={handleTextChange} handleSubmit={handleSubmit}/>}/>
-          <Route path='/videos' element={<VideoIndex/>}/>
+          {/* <Route path='/videos' element={<VideoIndex/>}/> */}
           <Route path='/about' element={<About />}/>
         </Routes>
         <Footer />
