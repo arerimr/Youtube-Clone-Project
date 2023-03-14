@@ -8,42 +8,24 @@ export default function Home() {
   const [videos, setVideos] = useState([]);
 
   function handleTextChange(e) {
-    let val = e.target.value;
-    const result = val.length ? filterVideo(val, videos) : videos;
-    setSearchInput(val);
-    setVideos(result);
+      setSearchInput(e.target.value);
+    }
+
+function handleSubmit(e) {
+      e.preventDefault();
+      
+      getVideos(searchInput).then((res) => {
+          setVideos(res);
+        }); 
+
+    setSearchInput("");
   }
-
-  function filterVideo(searchInput, videos) {
-    return videos.filter((video) => {
-      return video.title.toLowerCase().match(searchInput.toLowerCase());
-    });
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    let videoSearch = e.target.value;
-    console.log(videoSearch);
-    getVideos().then((res) => {
-      setVideos(res);
-    });
-
-    // setSearchInput("");
-  }
-
-  //   useEffect(() => {
-  //     getVideos()
-  //       .then((res) => {
-
-  //         setVideos(res);
-  //         // console.log(videos)
-  //         // setAllMovies(res);
-  //         // setLoadingError(false);
-  //       })
-  //       .catch((error) => {
-  //         // setLoadingError(true);
-  //       });
-  //   }, [searchInput]);
+//   console.log(videos.items);
+    // useEffect(() => {           
+    //     getVideos(searchInput).then((res) => {      
+    //         setVideos(res);     
+    //     });                                         
+    // }, [searchInput]);          
 
   return (
     <div className="home">
