@@ -1,8 +1,10 @@
+
 import { useState, useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 
 // import VideoShowPage from "./VideoShowPage";
 import ErrorMessage from "../Components/errors/ErrorMessage";
+
 
 function VideoIndex() {
   const [loadingError, setLoadingError] = useState(false);
@@ -11,6 +13,14 @@ function VideoIndex() {
   const videoList = location.state.res;
 
   console.log(videoList);
+
+  function filterVideo(search, videos) {
+    return videos.filter((video) => {
+      return video.title.toLowerCase().match(search.toLowerCase());
+    });
+  }
+
+
 
   return (
     <div className="video-index">
