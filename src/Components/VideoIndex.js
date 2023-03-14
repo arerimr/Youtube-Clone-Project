@@ -13,7 +13,6 @@ function VideoIndex() {
   console.log(videoList);
   return (
     <div className="video-index">
-      <p>display videos</p>
       <div>
         {loadingError ? (
           <ErrorMessage />
