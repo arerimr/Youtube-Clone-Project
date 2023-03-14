@@ -2,15 +2,16 @@
 
 import { useState, useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
+import "./VideoIndex.css"
 
 // import VideoShowPage from "./VideoShowPage";
 import ErrorMessage from "../Components/errors/ErrorMessage";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 // const { id } = useParams();
 
 
-function VideoIndex({searchInput}) {
+function VideoIndex() {
 
   const [loadingError, setLoadingError] = useState(false);
 
