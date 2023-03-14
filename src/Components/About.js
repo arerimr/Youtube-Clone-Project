@@ -17,14 +17,14 @@ export default function About() {
             <h3>Meet the Engineers...</h3>
             <section className="team">
                 <div className="will">
-                    <img src={will} alt="Will Santos" />
+                    <img src={will} alt="Wil Santos" />
                 </div>
                 <div className="info">
                     <h4>Will Santos</h4>
                     <span>Full Stack Web Developer</span>
                     <span>Pursuit Fellow 9.4 N&W</span>
                     <p>Github: <ExternalLink href="https://github.com/Wilsantos1975" target="_blank">@Wilsantos1975</ExternalLink></p>
-                    <p>Linkedin: <ExternalLink href="https://www.linkedin.com/in/fausto-wilghen-santos-9083a9112/" target="_blank">Will Santos</ExternalLink></p>
+                    <p>Linkedin: <ExternalLink href="https://www.linkedin.com/in/fausto-wilghen-santos-9083a9112/" target="_blank">Wil Santos</ExternalLink></p>
                 </div>
 
                 <hr />
