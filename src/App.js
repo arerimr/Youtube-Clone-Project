@@ -7,6 +7,7 @@ import { Routes, Route } from "react-router-dom";
 import VideoIndex from './Components/VideoIndex';
 import { getVideos } from './Api/fetch';
 import { useState } from 'react';
+import VideoShowPage from './Components/VideoShowPage';
 
 function App() {
   const [searchInput, setSearchInput] = useState("")
@@ -37,6 +38,7 @@ function App() {
           <Route path='/' element={<Home searchInput={searchInput} handleTextChange={handleTextChange} handleSubmit={handleSubmit}/>}/>
           {/* <Route path='/videos' element={<VideoIndex/>}/> */}
           <Route path='/about' element={<About />}/>
+          <Route path='/:id' element={<VideoShowPage />} />
         </Routes>
         <Footer />
     </div>

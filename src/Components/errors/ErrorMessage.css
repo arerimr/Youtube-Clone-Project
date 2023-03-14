@@ -1,11 +1,17 @@
 .error {
     border: 1px solid var(--error);
     margin: 25px;
-    padding: 25px;
   }
   .error p {
     color: var(--error);
     font-family: var(--primary-font);
     margin: 25px;
     text-align: center;
+    padding: 15px;
+    background-color: #d6d8d9;
+    height: 15px;
+    width: 460px;
+    border-radius: 5px;
   }
+
+

@@ -1,13 +1,14 @@
 import { getVideos } from "../Api/fetch";
 import { useEffect, useState, } from "react";
-
-import { useParams } from "react-router-dom";
-import VideoShowPage from "./VideoShowPage";
+// import { useParams } from "react-router-dom";
+// import VideoShowPage from "./VideoShowPage";
 import ErrorMessage from "../Components/errors/ErrorMessage";
+import { Link } from "react-router-dom";
 
-const { search } = useParams();
+// const { id } = useParams();
 
-function VideoIndex() {
+function VideoIndex({searchInput}) {
+
   const [loadingError, setLoadingError] = useState(false);
   const [search, setSearch] = useState(""); 
   const [videos, setVideos] = useState([]);
@@ -16,6 +17,7 @@ function VideoIndex() {
     getVideos(searchInput)
       .then((video) => {
         console.log(video.items)
+        setSearch(searchInput);
         setVideos(video.items);
         setLoadingError(false);
       })
@@ -34,16 +36,6 @@ function VideoIndex() {
     });
   }
 
-
-
-  function filterVideo(search, videos) {
-    return videos.filter((video) => {
-      return video.title.toLowerCase().match(search.toLowerCase());
-    });
-  }
-
-
-
   return (
     <div className="video-index">
       <p>display videos</p>
@@ -54,8 +46,10 @@ function VideoIndex() {
           videos.map((video) => {
             return (
               <div key={video.id}>
+                <Link to={`/${video.id.videoId}`}>
                 <img src={video.snippet.thumbnails.medium.url} alt={video.snippet.title} />
                 <p>{video.snippet.title}</p>
+                </Link>
               </div>
             );
           })
