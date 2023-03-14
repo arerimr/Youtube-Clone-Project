@@ -1,38 +1,27 @@
-import { getVideos } from "../Api/fetch";
-import { useEffect, useState, } from "react";
-// import { useParams } from "react-router-dom";
+
+
+import { useState, useEffect } from "react";
+import { useLocation, Link } from "react-router-dom";
+
 // import VideoShowPage from "./VideoShowPage";
 import ErrorMessage from "../Components/errors/ErrorMessage";
 import { Link } from "react-router-dom";
 
 // const { id } = useParams();
 
+
 function VideoIndex({searchInput}) {
 
   const [loadingError, setLoadingError] = useState(false);
-  const [search, setSearch] = useState(""); 
-  const [videos, setVideos] = useState([]);
 
-  useEffect(() => {
-    getVideos(searchInput)
-      .then((video) => {
-        console.log(video.items)
-        setSearch(searchInput);
-        setVideos(video.items);
-        setLoadingError(false);
-      })
-      .catch((error) => {
-        setLoadingError(true);
-      });
-  }, [searchInput]);
+  const location = useLocation();
+  const videoList = location.state.res;
 
-  // if (searchInput === undefined) {
-  //   // searchInput = "surfing"
-  // }
+  console.log(videoList);
 
-  function filterVideo(searchInput, videos) {
+  function filterVideo(search, videos) {
     return videos.filter((video) => {
-      return video.title.toLowerCase().match(searchInput.toLowerCase());
+      return video.title.toLowerCase().match(search.toLowerCase());
     });
   }
 
@@ -43,14 +32,20 @@ function VideoIndex({searchInput}) {
         {loadingError ? (
           <ErrorMessage />
         ) : (
-          videos.map((video) => {
+          videoList.items.map((video) => {
             return (
-              <div key={video.id}>
-                <Link to={`/${video.id.videoId}`}>
-                <img src={video.snippet.thumbnails.medium.url} alt={video.snippet.title} />
-                <p>{video.snippet.title}</p>
-                </Link>
-              </div>
+              <ul>
+                <li key={video.id.videoId}>
+                 <Link to={`/videos/${video.id.videoId}`}>
+                 <img
+                    src={video.snippet.thumbnails.medium.url}
+                    alt={video.snippet.title}
+                  />
+                  <h3>{video.snippet.title}</h3>
+                 </Link> 
+                </li>
+              </ul>
+
             );
           })
         )}

@@ -1,9 +1,6 @@
-import { getOneVideo } from "../Api/fetch"
-import { useState, useEffect } from "react"
-import { useParams } from "react-router-dom"
-import { useLocation } from "react-router-dom"
-import ErrorMessage from "./errors/ErrorMessage"
 
+import YouTube from "react-youtube";
+import { useParams } from "react-router-dom";
 
 function VideoShowPage() {
   const [video, setVideo] = useState({})
@@ -11,26 +8,17 @@ function VideoShowPage() {
 
   const { id } = useParams()
 
-  useEffect(() => {
-    getOneVideo(id).then((vid) => {
-      let snip = vid.items[0].snippet
-      setVideo(snip)
-      Object.keys(snip).length === 0 ? setError(true) : setError(false)
-      // console.log(snip)
-    }).catch(() => setError(true))
-  }, [id])
+  const {id} = useParams();
 
-  //console.log(video)
+  function onReady(e) {
+    e.target.playVideo()
+  }
+  
   return (
-    <div className="video-show">{
-      error ? (<ErrorMessage />) : (
-        <>
-          <img src={video.thumbnails.medium.url} alt={video.title} />
-          <h3>{video.title}</h3>
-          <p>{video.description}</p>
-        </>
-      )
-    }
+    <div className="video-show">
+      
+<YouTube videoId={id} onReady={onReady} />
+  
 
     </div>
   )
