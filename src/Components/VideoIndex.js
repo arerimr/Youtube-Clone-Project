@@ -1,12 +1,17 @@
 
+
 import { useState, useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 
 // import VideoShowPage from "./VideoShowPage";
 import ErrorMessage from "../Components/errors/ErrorMessage";
+import { Link } from "react-router-dom";
+
+// const { id } = useParams();
 
 
-function VideoIndex() {
+function VideoIndex({searchInput}) {
+
   const [loadingError, setLoadingError] = useState(false);
 
   const location = useLocation();
@@ -19,8 +24,6 @@ function VideoIndex() {
       return video.title.toLowerCase().match(search.toLowerCase());
     });
   }
-
-
 
   return (
     <div className="video-index">
@@ -42,6 +45,7 @@ function VideoIndex() {
                  </Link> 
                 </li>
               </ul>
+
             );
           })
         )}
