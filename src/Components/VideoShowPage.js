@@ -1,8 +1,9 @@
+
 import YouTube from "react-youtube";
 import { useParams } from "react-router-dom";
 
 
-function VideoShowPage({ video }) {
+function VideoShowPage() {
 
   const {id} = useParams();
 

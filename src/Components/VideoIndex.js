@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useLocation, Link } from "react-router-dom";
-
-// import VideoShowPage from "./VideoShowPage";
 import ErrorMessage from "../Components/errors/ErrorMessage";
+
+// const { id } = useParams();
 
 function VideoIndex() {
   const [loadingError, setLoadingError] = useState(false);
@@ -14,7 +14,6 @@ function VideoIndex() {
 
   return (
     <div className="video-index">
-      <p>display videos</p>
       <div>
         {loadingError ? (
           <ErrorMessage />
@@ -23,13 +22,13 @@ function VideoIndex() {
             return (
               <ul>
                 <li key={video.id.videoId}>
-                 <Link to={`/videos/${video.id.videoId}`}>
-                 <img
-                    src={video.snippet.thumbnails.medium.url}
-                    alt={video.snippet.title}
-                  />
-                  <h3>{video.snippet.title}</h3>
-                 </Link> 
+                  <Link to={`/videos/${video.id.videoId}`}>
+                    <img
+                      src={video.snippet.thumbnails.medium.url}
+                      alt={video.snippet.title}
+                    />
+                    <h3>{video.snippet.title}</h3>
+                  </Link>
                 </li>
               </ul>
             );
