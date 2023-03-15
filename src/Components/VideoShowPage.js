@@ -5,7 +5,7 @@ import "./VideoShowPage.css"
 
 
 function VideoShowPage() {
-  const {id} = useParams()
+
 
   function onReady(e) {
     e.target.playVideo()
