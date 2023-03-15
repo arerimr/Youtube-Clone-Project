@@ -1,10 +1,14 @@
 import { useState } from "react";
 import { useLocation, Link } from "react-router-dom";
+
+import "./VideoIndex.css"
+
 import ErrorMessage from "../Components/errors/ErrorMessage";
 
 // const { id } = useParams();
 
 function VideoIndex() {
+
   const [loadingError, setLoadingError] = useState(false);
 
   const location = useLocation();
