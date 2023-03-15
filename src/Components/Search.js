@@ -19,7 +19,7 @@ function Search() {
     e.preventDefault();
 
     getVideos(searchInput).then((res) => {
-      navigate("/videos", { state:{res} })
+      navigate("/videos", { state :{res} })
     });
 
     setSearchInput("");

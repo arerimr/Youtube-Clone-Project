@@ -2,7 +2,9 @@
 import YouTube from "react-youtube";
 import { useParams } from "react-router-dom";
 
+
 function VideoShowPage() {
+  const {id} = useParams()
 
   function onReady(e) {
     e.target.playVideo()

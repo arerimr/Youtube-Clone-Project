@@ -5,7 +5,7 @@ import "./VideoIndex.css"
 
 import ErrorMessage from "../Components/errors/ErrorMessage";
 
-// const { id } = useParams();
+
 
 function VideoIndex() {
 
@@ -13,6 +13,8 @@ function VideoIndex() {
 
   const location = useLocation();
   const videoList = location.state.res;
+
+  console.log(videoList)
 
 
   return (
