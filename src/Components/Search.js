@@ -1,7 +1,7 @@
-import "./search.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getVideos } from "../Api/fetch"
+import "./search.css";
 
 
 function Search() {
