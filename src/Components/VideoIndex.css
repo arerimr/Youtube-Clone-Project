@@ -1,8 +1,28 @@
-.video-index ul {
-    display: inline-block;
-   inline-size: auto;
+.video-index div {
+display: grid;
+grid-template-columns: repeat(3, 400px);
+grid-template-rows: auto;
 }
+
+.video-index li{
+    width: 400px;
+}
+
+.thumbnail{
+    width: auto;
+}
+
+.titleDiv{
+    width: auto;
+}
+
+/* .video-index li {
+    flex-direction: column;
+  flex: 33.33%;
+
+} */
 
 .video-index h3{
     color: black;
+    width: auto;
 }
