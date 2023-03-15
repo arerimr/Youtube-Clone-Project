@@ -26,15 +26,17 @@ function VideoIndex() {
           videoList.items.map((video) => {
             return (
               <ul>
-                <li key={video.id.videoId}>
-                  <Link to={`/videos/${video.id.videoId}`}>
-                    <img
-                      src={video.snippet.thumbnails.medium.url}
-                      alt={video.snippet.title}
-                    />
-                    <h3>{video.snippet.title}</h3>
-                  </Link>
-                </li>
+                <div className="indexDiv">
+                  <li key={video.id.videoId}>
+                    <Link to={`/videos/${video.id.videoId}`}>
+                      <img
+                        src={video.snippet.thumbnails.medium.url}
+                        alt={video.snippet.title}
+                      />
+                      <h3>{video.snippet.title}</h3>
+                    </Link>
+                  </li>
+                </div>
               </ul>
             );
           })
