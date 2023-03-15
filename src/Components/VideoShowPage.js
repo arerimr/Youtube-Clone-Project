@@ -9,12 +9,12 @@ function VideoShowPage() {
   function onReady(e) {
     e.target.playVideo()
   }
-  
+
   return (
     <div className="video-show">
-      
-<YouTube videoId={id} onReady={onReady} />
-  
+
+      <YouTube videoId={id} onReady={onReady} />
+
 
     </div>
   )
