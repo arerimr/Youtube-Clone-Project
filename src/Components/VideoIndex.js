@@ -28,7 +28,6 @@ function VideoIndex() {
 
   return (
     <div className="video-index">
-      <p>display videos</p>
       <div>
         {loadingError ? (
           <ErrorMessage />
