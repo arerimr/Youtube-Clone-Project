@@ -14,7 +14,6 @@ function VideoIndex() {
   const location = useLocation();
   const videoList = location.state.res;
 
-  // console.log(videoList);
 
   return (
     <div className="video-index">
