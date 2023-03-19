@@ -7,7 +7,7 @@ This project was created as part of the Pursuit Felloship curriculum. This proje
 
 <br>
 
-![HOME PAGE](http://localhost:3000/)
+![HOME PAGE](https://user-images.githubusercontent.com/115671600/226187446-2f30a607-6121-44e3-85c3-d33bda44eae4.png)
 
 <br>
 
