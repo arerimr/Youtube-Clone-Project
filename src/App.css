@@ -60,3 +60,22 @@ margin-top: auto;
     height: 320px;
   }
 } */
+
+@media(max-width: 400px){
+  .Nav-bar{
+    width: auto;
+  }
+  .error{
+    width: 300px;
+    display: flex;
+    height: auto;
+    padding: 0;
+    font-size: small;
+  }
+  .search-form{
+    display: flex;
+    width: 300px;
+    padding: 0;
+  }
+
+}

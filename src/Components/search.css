@@ -9,6 +9,12 @@
     padding: auto;
 }
 
+.submit:hover{
+    width: 120px;
+    height: 40px;
+    font-size: x-large;
+}
+
 #search{
     width: 375px;
     height: 25px;

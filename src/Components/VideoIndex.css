@@ -12,10 +12,6 @@ grid-template-rows: auto;
     width: auto;
 }
 
-.titleDiv{
-    width: auto;
-}
-
 /* .video-index li {
     flex-direction: column;
   flex: 33.33%;
@@ -25,4 +21,18 @@ grid-template-rows: auto;
 .video-index h3{
     color: black;
     width: auto;
+}
+
+@media(max-width: 400px){
+    .video-index div{
+        display: flex;
+        flex-direction: column;
+    }
+    .video-index h3{
+        color: black;
+        width: 300px;
+    }
+    .video-index li{
+        width: 300px;
+    }
 }
