@@ -10,7 +10,7 @@ import ErrorMessage from "../Components/errors/ErrorMessage";
 
 function VideoIndex() {
 
-  const id = uuidv4();
+  // const uniqueID = uuidv4();
 
   const [loadingError, setLoadingError] = useState(false);
 
@@ -30,7 +30,7 @@ function VideoIndex() {
             return (
               <ul key={video.id.videoId}>
                 <div className="indexDiv">
-                  <li key={id}>
+                  <li key={video.id.videoId}>
                     <Link to={`/videos/${video.id.videoId}`}>
                       <img
                         src={video.snippet.thumbnails.medium.url}
