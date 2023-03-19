@@ -1,6 +1,7 @@
 
 import YouTube from "react-youtube";
 import { useParams } from "react-router-dom";
+import "./VideoShowPage.css"
 
 
 function VideoShowPage() {
@@ -14,7 +15,6 @@ function VideoShowPage() {
     <div className="video-show">
 
       <YouTube videoId={id} onReady={onReady} />
-
 
     </div>
   )
