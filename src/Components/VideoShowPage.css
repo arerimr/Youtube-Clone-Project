@@ -1,1 +1,8 @@
+@media(max-width: 400px){
+    .video-show{
+        transform: rotate(90deg);
+        padding: 20px;
+    }
+}
+
 

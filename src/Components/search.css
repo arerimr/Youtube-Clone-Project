@@ -5,8 +5,14 @@
     height: 30px;
     width: 100px;
     color: white;
-    font-size: x-large;
+    /* font-size: small; */
     padding: auto;
+}
+
+.submit:hover{
+    width: 120px;
+    height: 40px;
+    font-size: x-large;
 }
 
 #search{

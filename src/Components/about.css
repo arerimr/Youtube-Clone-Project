@@ -44,3 +44,10 @@
 .info a:hover{
     color: black;
 }
+
+@media(max-width: 400px){
+    .team{
+        display: flex;
+        flex-direction: column;
+    }
+}

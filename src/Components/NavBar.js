@@ -10,10 +10,12 @@ function NavBar() {
 
   return (
     <div className="Nav-bar">
-      <ul>
         <Link to="/">
-          <li className="header"><img src={logo} alt="logo" /> YÚ Tub</li>
+          <span className="header"><img src={logo} alt="logo" /> YÚ Tub</span>
         </Link>
+      <label for="burger">&#9776;</label>
+      <input type="checkbox" id="burger"/>
+      <ul id="navItems">
         <Link to="/">
           <li><strong>Home</strong></li>
         </Link>

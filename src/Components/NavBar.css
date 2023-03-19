@@ -1,4 +1,4 @@
-.Nav-bar{
+.Nav-bar {
     background-color: #fa2100;
     display: flex;
     flex-direction: row;
@@ -6,29 +6,68 @@
     font-size: large;
 }
 
-li{
+li {
     list-style: none;
     display: inline;
-    padding-right: 25px;
     font-family: 'Comic Sans MS';
-    padding-left: 0;
+    padding-left: 25px;
 }
 
-a{
+a {
     color: white;
     text-decoration: none;
 }
 
-.Nav-bar img{
+.Nav-bar img {
     color: white;
     width: 40px;
 }
 
-.header{
+.header {
     font-size: xx-large;
 }
 
-.navSearch{
+.navSearch {
     padding-top: 25px;
     padding-left: 10%;
+}
+
+@media(max-width: 400px) {
+    .Nav-bar{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+.Nav-bar label, #burger {display: none;}
+
+
+.Nav-bar a:hover{
+    background-color: white;
+    color: #fa2100;
+    border-radius: 38%;
+    padding: 10px;
+}
+
+@media screen and (max-width: 768px){
+    .Nav-bar li{
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .Nav-bar label{
+        display: inline-block;
+        color: white;
+        font-size: xx-large;
+        font-style: normal;
+        padding: 10px;
+    }
+    #navItems{
+        display: none;
+    }
+    .Nav-bar input:checked ~ #navItems{
+        display: block;
+    }
+    
 }
