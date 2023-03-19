@@ -38,3 +38,6 @@ using prior knowledge of:
 <p>⌨ JAVASCRIPT</p>
 <p>💻 HTML</p>
 🎨 CSS
+
+## COLLABORATORS
+![TEAM](https://user-images.githubusercontent.com/115671600/226187754-1989e80e-376e-4617-aec0-39d868671c37.png)
