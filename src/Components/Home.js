@@ -2,8 +2,7 @@ import Search from "./Search";
 import ErrorMessage from "./errors/ErrorMessage";
 
 
-export default function Home() {
-  
+function Home() {
 
   return (
     <div className="home">
@@ -12,3 +11,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Home;
