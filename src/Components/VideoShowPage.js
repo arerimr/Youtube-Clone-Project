@@ -4,7 +4,11 @@ import { useParams } from "react-router-dom";
 import "./VideoShowPage.css"
 
 
+
+
 function VideoShowPage() {
+  
+  const { id } = useParams()
   function onReady(e) {
     e.target.playVideo()
   }

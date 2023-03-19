@@ -13,7 +13,7 @@ function NavBar() {
         <Link to="/">
           <span className="header"><img src={logo} alt="logo" /> YÚ Tub</span>
         </Link>
-      <label for="burger">&#9776;</label>
+      <label htmlFor="burger">&#9776;</label>
       <input type="checkbox" id="burger"/>
       <ul id="navItems">
         <Link to="/">
