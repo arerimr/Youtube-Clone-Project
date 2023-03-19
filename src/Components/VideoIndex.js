@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useLocation, Link } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
 
 import "./VideoIndex.css"
 
@@ -8,6 +9,8 @@ import ErrorMessage from "../Components/errors/ErrorMessage";
 
 
 function VideoIndex() {
+
+  const id = uuidv4();
 
   const [loadingError, setLoadingError] = useState(false);
 
@@ -25,9 +28,9 @@ function VideoIndex() {
         ) : (
           videoList.items.map((video) => {
             return (
-              <ul>
+              <ul key={video.id.videoId}>
                 <div className="indexDiv">
-                  <li key={video.id.videoId}>
+                  <li key={id}>
                     <Link to={`/videos/${video.id.videoId}`}>
                       <img
                         src={video.snippet.thumbnails.medium.url}
