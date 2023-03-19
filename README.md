@@ -18,7 +18,7 @@ A list of videos will be displayed based on the search input
 
 <br>
 
-![SEARCH RESULT](http://localhost:3000/videos:id)
+![SEARCH RESULT](https://user-images.githubusercontent.com/115671600/226187526-443b1813-3619-490c-a20c-a1fd6da7f1f5.png)
 
 <br>
 
