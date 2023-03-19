@@ -1,4 +1,4 @@
-# [YÚ Tub](https://64172ce3083164624c1d43a5--gregarious-genie-9c406a.netlify.app/)
+# [YÚ Tub](https://yutubcloned.netlify.app/)
 #### A YouTube Clone
 
 
@@ -22,7 +22,7 @@ A list of videos will be displayed based on the search input
 
 <br>
 
-#### [CLICK HERE](https://64172ce3083164624c1d43a5--gregarious-genie-9c406a.netlify.app/) to view site!
+#### [CLICK HERE](https://yutubcloned.netlify.app/) to view site!
 
 <br>
 
